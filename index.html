@@ -1,54 +1,91 @@
-<!DOCTYPE html>
 <html>
     <head>
-      <meta meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA05JREFUOI1tk09MHHUUx7+/+QMzy+6wf5jBVZjNZpWs0AUMkQSi2ay4xpraJqaNick2ZGsPVYweTKORxgNNPKsxGo2yoSIJmvVgSozEFrXugQtgSxpFgwUXWGRnZ9yZgdlp9+dBMaTyTV7yDu/zDu99vwT/VygSiWQty3qsVqupLMtSlmXXfT7fldXV1Y8BaIcw/ygcDr8cDAZ1APTuIoTQQCBQkWV55CBD9htZlt/VdX3kkfuegtrYser6qlO7ZO+HfuaJU7anEnr/+pv+SCSS5DgOpmleWl5ePg0AHAAoinLOMIwR13V3k/GjlxNtfQvtHS2fiAEPXbj863PhxJHpJd9gE6VU3dzcbNd1PaMoSmF7e/sDxu/3+2u12pjjOABw5n5vz07vs7H3+s9HtxJnW0tigKunx7o/a2lp6RUEIee67vlisQjXdS8CkJhAIJAxDCME4CqAKd7DNMTSQQMAVmbKkmPd2QMAnucRi8UK0Wi0AmBO1/VQNBo9zViWNUQpBYBL3721/JC9vev76pWF52dHr5+7OfP7BereKUxOTkbK5fKfmUzme7/f3wvgU0opTNNMMa7rtv97xxsrV3eGvPeIVau0113+zXxwZ8VM9T0Tn83n848qilLo6uqq8TzPA7gBAK7rqhyldP8TtDnc2HlyvP8MIYQCwOfD87nOjLyZSqUGPB5P9/Dw8KimaW2Dg4MzhUIBDMMQhuO4dQAINgd7bjv09j784zsrMbO0uwUA8XicTExMHB8fHz+RSCRedRznGAAwDPMH4/V65wAgoQy8ULPc+X1f/Px16fFmVZzL5/MhTdMMQkiFEFJJJpPfiKJ4FAAkSZpjdV3/JX3kxEupwElVahMf+HJx4sP4zSdfM26ZL0r3ehtz195OFYvFznQ6fWtxcXFtY2NjyrbtgaamJrNUKmUJAPT1PDzq2LUxo1qx1rfWTq1/u/PTX6ajNApscb58paNarXp4nl/IZrP9qqpOi6LoEQThwtLS0sX/PK0oSq6hoYECqAOYBnAMQASACuBpAF8AqHMcRxVFyR2WJSLL8hs+n88+LEwAqCRJVmtr6+sHM0Tu3hIMBtu8Xu9Z0zSH6vV6hBBCWZZdEwRhVtO0j2zb3jg4/zdt2l+Dwfjm+wAAAABJRU5ErkJggg==" type="image/x-icon">
-      <link href="https://aohycent.github.io/assets/css/larena.css" rel="stylesheet"/>
-      <title>BOWINC ARENA</title>
+        <link href="https://aohycent.github.io/assets/css/larena.css" rel="stylesheet"/>
+        <style>
+            .packFrame{
+                border-radius: 1.8vw;
+                border: 2px double #0044aa;
+                max-width: 260px;
+                max-height: 260px;
+            }
+        </style>
     </head>
-    <body class="h100">
-        <div class="tbar">
-            <img class="logo_icon pleft" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA05JREFUOI1tk09MHHUUx7+/+QMzy+6wf5jBVZjNZpWs0AUMkQSi2ay4xpraJqaNick2ZGsPVYweTKORxgNNPKsxGo2yoSIJmvVgSozEFrXugQtgSxpFgwUXWGRnZ9yZgdlp9+dBMaTyTV7yDu/zDu99vwT/VygSiWQty3qsVqupLMtSlmXXfT7fldXV1Y8BaIcw/ygcDr8cDAZ1APTuIoTQQCBQkWV55CBD9htZlt/VdX3kkfuegtrYser6qlO7ZO+HfuaJU7anEnr/+pv+SCSS5DgOpmleWl5ePg0AHAAoinLOMIwR13V3k/GjlxNtfQvtHS2fiAEPXbj863PhxJHpJd9gE6VU3dzcbNd1PaMoSmF7e/sDxu/3+2u12pjjOABw5n5vz07vs7H3+s9HtxJnW0tigKunx7o/a2lp6RUEIee67vlisQjXdS8CkJhAIJAxDCME4CqAKd7DNMTSQQMAVmbKkmPd2QMAnucRi8UK0Wi0AmBO1/VQNBo9zViWNUQpBYBL3721/JC9vev76pWF52dHr5+7OfP7BereKUxOTkbK5fKfmUzme7/f3wvgU0opTNNMMa7rtv97xxsrV3eGvPeIVau0113+zXxwZ8VM9T0Tn83n848qilLo6uqq8TzPA7gBAK7rqhyldP8TtDnc2HlyvP8MIYQCwOfD87nOjLyZSqUGPB5P9/Dw8KimaW2Dg4MzhUIBDMMQhuO4dQAINgd7bjv09j784zsrMbO0uwUA8XicTExMHB8fHz+RSCRedRznGAAwDPMH4/V65wAgoQy8ULPc+X1f/Px16fFmVZzL5/MhTdMMQkiFEFJJJpPfiKJ4FAAkSZpjdV3/JX3kxEupwElVahMf+HJx4sP4zSdfM26ZL0r3ehtz195OFYvFznQ6fWtxcXFtY2NjyrbtgaamJrNUKmUJAPT1PDzq2LUxo1qx1rfWTq1/u/PTX6ajNApscb58paNarXp4nl/IZrP9qqpOi6LoEQThwtLS0sX/PK0oSq6hoYECqAOYBnAMQASACuBpAF8AqHMcRxVFyR2WJSLL8hs+n88+LEwAqCRJVmtr6+sHM0Tu3hIMBtu8Xu9Z0zSH6vV6hBBCWZZdEwRhVtO0j2zb3jg4/zdt2l+Dwfjm+wAAAABJRU5ErkJggg=="><input type="search" class="pright avm-nav-search" name="q" placeholder="Search Here..">
-        </div>
+    <body>
         <section class="avm screen">
-             <iframe class="widget" src="https://bowinc.afocha.org/20"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/21"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/22"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/23"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/24"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/25"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/26"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/27"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/28"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/29"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2a/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2b/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2c/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2d/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2e/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/2f/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/30"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/31"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/32"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/33"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/34"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/35"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/36"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/37"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/38"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/39"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3a/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3b/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3c/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3d/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3e/"></iframe>
-             <iframe class="widget" src="https://bowinc.afocha.org/3f/"></iframe>
+             <iframe class="widget" src="https://aonyex.africa/assignment" frameborder="0" style="width:100%;height:40vh;"></iframe>
+             <div id="iframewrapper"></div>
+            <img src="https://th.bing.com/th/id/OIG.gxKD.nUKoYSJ.q3iscvB" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.Lsuh0cWYZ17seZP17I4F" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.mCaxlyoGNrDhiusrn9H0" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.5qj_bIHESJCyodaWe0E." class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.g9Q1exiXABmJM0V8mKCt" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.cSufyFGPvMYIcrg3CQoj" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.WnAdSvEGiJIeYijcn.5F" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.JH_EyUq8N8ChTxAVctvn" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.Y73plA97MU3Z6enQn7wP" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.pGJoWaeEGygaMKYzy_wf" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.kYJzfZYLxAV3Ge8Q62Rr" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.TRGY6mdKzXMdYoZULCb5" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.7LAAqN1lNF_B376MZ_yt" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.UvZuxyh7cmSRCnscymm_" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.utkGziNYn7Zj60WKtBzA" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG..tU2NSIZO7Sa7Pn0ub58" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.N.uDKYc0ptLlXfi6UlRl" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.xwmQ8GynAcTEutYQOE33" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.JM5Su0pKwAwoXxm4Sutj" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.1ERzb9wJoO09VZvEJKCR" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.FcTErKPbfauQex.h6rEn" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.Vb8JHMZ0UTPPOchJ3PT1" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.kfxdbGtkpevH8KuTEQTI" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.xGJQ6B_C9o5xj0ipFT3P" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.QzXGmegI_MlczYLII2W0" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.PGJxHkbc1gUqp0mefIhi" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.f1mim8iM2jLfRZZpsrOj" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.N3BpkgR0L8RenyyIr2NH" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.FMa8pkyOr9dbIBLTIihM" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.ZMYdPhm7KO5PEcCUG73V" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.GKbq3EjlpY3jyjpfqn07" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.yb47EmiINrupE0sYnfAX" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.jF5HDhIwGBuxqSjBLrdJ" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.vCzkQkCe1tpDTdmdV3If" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG._886_Uk9VNwkjSzF5o9." class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.oZwfY5_3rgBXnRNph0fW" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG..2tuMZQ53HVPCRxE9dtE" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.RB3YcQW9cQQH2ThSNVtQ" class="packFrame">
+            <img src="https://th.bing.com/th/id/OIG.6QKKxpcNnyKIbSZkysb3" class="packFrame">
         </section>
-        <div class="packet">
-              <div class="hpacket"><h2>&copy; <a href="https://aohycent.github.io/larena/">Larena</a></h2></div>
-          </div>
-        <div class='ctl'>
-            <button id="ctlHome"></button>
-        </div>
+        <script>
+            var UTXO = "CAPENSIS";
+            var tokens = array(1:"gxKD.nUKoYSJ.q3iscvB",2:"Lsuh0cWYZ17seZP17I4F",3:"mCaxlyoGNrDhiusrn9H0",4:"5qj_bIHESJCyodaWe0E.",5:"g9Q1exiXABmJM0V8mKCt",6:"cSufyFGPvMYIcrg3CQoj",7:"WnAdSvEGiJIeYijcn.5F",8:"JH_EyUq8N8ChTxAVctvn",9:"Y73plA97MU3Z6enQn7wP",10:"pGJoWaeEGygaMKYzy_wf",11:"kYJzfZYLxAV3Ge8Q62Rr",12:"TRGY6mdKzXMdYoZULCb5",13:"7LAAqN1lNF_B376MZ_yt",14:"UvZuxyh7cmSRCnscymm_",15:"utkGziNYn7Zj60WKtBzA",16:".tU2NSIZO7Sa7Pn0ub58",17:"N.uDKYc0ptLlXfi6UlRl",18:"xwmQ8GynAcTEutYQOE33",19:"JM5Su0pKwAwoXxm4Sutj",20:"1ERzb9wJoO09VZvEJKCR",21:"FcTErKPbfauQex.h6rEn",22:"Vb8JHMZ0UTPPOchJ3PT1",23:"kfxdbGtkpevH8KuTEQTI",24:"xGJQ6B_C9o5xj0ipFT3P",25:"QzXGmegI_MlczYLII2W0",26:"PGJxHkbc1gUqp0mefIhi",27:"f1mim8iM2jLfRZZpsrOj",28:"N3BpkgR0L8RenyyIr2NH",29:"FMa8pkyOr9dbIBLTIihM",30:"ZMYdPhm7KO5PEcCUG73V",31:"GKbq3EjlpY3jyjpfqn07",32:"yb47EmiINrupE0sYnfAX",33:"jF5HDhIwGBuxqSjBLrdJ",34:"vCzkQkCe1tpDTdmdV3If",35:"_886_Uk9VNwkjSzF5o9.",36:"oZwfY5_3rgBXnRNph0fW",37:".2tuMZQ53HVPCRxE9dtE",38:"RB3YcQW9cQQH2ThSNVtQ",39:"6QKKxpcNnyKIbSZkysb3");
+
+            displayCollections(UTXO)
+            function displayCollections(data) {
+                var utx = data;
+                var tx ="<marquee>testnet</marquee>";
+                document.write(tx);
+            }
+
+            submitTryit()
+            function submitTryit(n) {
+                var text = document.getElementById("textareaCode").value;
+                var ifr = document.createElement("iframe");
+                ifr.setAttribute("frameborder", "0");
+                ifr.setAttribute("class", "packet");
+                ifr.setAttribute("style", "width:100%;height:50vh");
+                ifr.setAttribute("id", "iframeResult");
+                ifr.setAttribute("name", "iframeResult");
+                ifr.setAttribute("allowfullscreen", "true");
+                document.getElementById("iframewrapper").innerHTML = "";
+                document.getElementById("iframewrapper").appendChild(ifr);
+                var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+                ifrw.document.open();
+                ifrw.document.write(text);
+                ifrw.document.close();
+                if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+                    ifrw.document.body.contentEditable = true;
+                    ifrw.document.body.contentEditable = false;
+                }
+            }
+    </script>
     </body>
 </html>
